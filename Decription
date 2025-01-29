@@ -1,0 +1,28 @@
+This is a DU Cafeteria Management project developed in Java. The system includes a login system with two types of users:
+
+Teachers & Students: They can log in using their registration ID and password after signing up for the cafeteria.
+Admin & Employees:
+The admin can log in using a unique ID and password.
+Employees require the admin’s permission along with their ID and password to access the system.
+For security, users can recover their password using a predefined codeword in case they forget it.
+
+Features
+For Teachers & Students:
+✅ View the menu
+✅ Add food items to the cart and purchase them
+✅ Leave reviews for food items
+✅ View purchase history
+✅ Update profile
+
+For Admin & Employees:
+✅ Access customer and product charts
+✅ Track total and daily income
+✅ Update product availability
+✅ Add new products and set prices
+✅ Admin can approve employee login to prevent unauthorized access
+✅ Admin can also add new employees
+
+Additionally, the system includes a sign-out button, which prompts a confirmation message before logging out.
+
+Users can learn more about the cafeteria and its services on the "About Us" page.
+
