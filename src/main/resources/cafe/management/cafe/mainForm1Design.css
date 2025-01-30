@@ -1,0 +1,177 @@
+.header {
+    -fx-background-color: linear-gradient(to bottom right, rgba(9, 140, 83, 0.7), rgba(36, 104, 97, 0.7)); /* Semi-transparent gradient */
+    -fx-border-color: #fff;
+    -fx-border-width: 0 0 0.8px 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 0); /* Shadow effect */
+    -fx-backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.nav-form {
+    -fx-background-color: linear-gradient(to bottom right,
+        rgba(42, 61, 109, 0.6),  /* #2a3d6d with 60% opacity */
+        rgba(60, 110, 143, 0.6)  /* #3c6e8f with 60% opacity */
+    );
+    -fx-backdrop-filter: blur(8px); /* Maintained glass effect */
+}
+
+.nav-btn {
+    -fx-background-color: rgba(173, 216, 230, 0.3); /* Light pastel blue for a calming effect */
+    -fx-background-radius: 20px; /* Rounded corners */
+    -fx-border-radius: 20px;
+    -fx-border-color: rgba(173, 216, 230, 0.6); /* Subtle border with the same pastel blue tone */
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 2); /* Soft shadow */
+    -fx-padding: 10px 20px; /* Comfortable padding */
+    -fx-font-size: 14px; /* Medium font size */
+    -fx-text-fill: #333; /* Dark gray text for better readability */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+    -fx-transition: all 0.4s ease-in-out; /* Smooth transition for hover effects */
+    -fx-transform: perspective(1px) translateZ(0); /* Subtle 3D effect */
+}
+
+/* Hover effect */
+.nav-btn:hover {
+    -fx-background-color: rgba(173, 216, 230, 0.4); /* Slightly darker pastel blue on hover */
+    -fx-border-color: rgba(135, 206, 235, 0.6); /* Enhance the border slightly */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 12, 0, 0, 3); /* Brighter shadow on hover */
+    -fx-text-fill: #222; /* Slightly darker text for more focus */
+}
+
+/* Press effect */
+.nav-btn:pressed {
+    -fx-background-color: rgba(135, 206, 235, 0.5); /* Slightly more opaque pastel blue when pressed */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 8, 0, 0, 1); /* Softer shadow when pressed */
+    -fx-border-color: rgba(100, 149, 237, 0.5); /* A slightly darker pastel shade */
+    -fx-transform: scale(0.98); /* Slight shrink on press for feedback */
+}
+
+
+
+
+
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 10, 0, 0, 0); /* Stronger shadow effect */
+}
+
+.white-bg {
+    -fx-background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for a glass effect */
+    -fx-backdrop-filter: blur(10px); /* Blur effect for glassy appearance */
+    -fx-background-radius: 4px; /* Rounded corners */
+    -fx-background-padding: 2px;
+}
+
+.radius {
+    -fx-background-radius: 8px;
+}
+
+.transparent {
+    -fx-background-color: transparent;
+}
+
+
+.gradiented {
+    -fx-background-color: linear-gradient(to bottom right, #2a3d6d, #3c6e8f); /* Deep blue gradient */
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 2);
+    -fx-padding: 10px;
+    -fx-min-width: 230px;
+    -fx-min-height: 160px;
+    -fx-max-width: 230px;
+    -fx-max-height: 160px;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.gradiented:hover {
+    -fx-background-color: linear-gradient(to bottom right, #3c6e8f, #2a3d6d); /* Inverted deep blue */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 12, 0, 3, 3);
+    -fx-cursor: hand;
+}
+.import-btn {
+    -fx-background-color: rgba(173, 216, 230, 0.3); /* Light pastel blue for a calming effect */
+    -fx-background-radius: 20px; /* Rounded corners */
+    -fx-border-radius: 20px;
+    -fx-border-color: rgba(173, 216, 230, 0.6); /* Subtle border with the same pastel blue tone */
+    -fx-border-width: 0.7px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 2); /* Soft shadow */
+    -fx-padding: 10px 20px; /* Comfortable padding */
+    -fx-font-size: 14px; /* Slightly smaller font size for specific use case */
+    -fx-text-fill: #333; /* Dark gray text for better readability */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+    -fx-transition: all 0.4s ease-in-out; /* Smooth transition for hover effects */
+    -fx-transform: perspective(1px) translateZ(0); /* Subtle 3D effect */
+}
+
+/* Hover effect */
+.import-btn:hover {
+    -fx-background-color: rgba(173, 216, 230, 0.4); /* Slightly darker pastel blue on hover */
+    -fx-border-color: rgba(135, 206, 235, 0.6); /* Enhance the border slightly */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 12, 0, 0, 3); /* Brighter shadow on hover */
+    -fx-text-fill: #222; /* Slightly darker text for more focus */
+}
+
+/* Press effect */
+.import-btn:pressed {
+    -fx-background-color: rgba(135, 206, 235, 0.5); /* Slightly more opaque pastel blue when pressed */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 8, 0, 0, 1); /* Softer shadow when pressed */
+    -fx-border-color: rgba(100, 149, 237, 0.5); /* A slightly darker pastel shade */
+    -fx-transform: scale(0.98); /* Slight shrink on press for feedback */
+}
+
+/* Anchor Panel Container */
+.anchor-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.anchor-panel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ImageView (Profile Picture) */
+.image-view {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile Info Section */
+.profile-info {
+  text-align: center;
+  color: #333;
+}
+
+.profile-info h3 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.profile-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+

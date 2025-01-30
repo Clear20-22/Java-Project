@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.management.cafe.CustomerController">
+    <children>
+        <StackPane prefHeight="600.0" prefWidth="1100.0">
+            <children>
+                <AnchorPane fx:id="CustomerMainForm" prefHeight="600.0" prefWidth="1100.0">
+                    <children>
+                        <BorderPane layoutX="34.0" layoutY="58.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <left>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane layoutX="14.0" layoutY="114.0" prefHeight="601.0" prefWidth="275.0" styleClass="nav-form" stylesheets="@mainForm1Design.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="-1.0" prefHeight="74.0" prefWidth="216.0">
+                                                    <children>
+                                                        <Label layoutX="23.0" layoutY="31.0" prefHeight="25.0" prefWidth="244.0" style="-fx-alignment: center;" styleClass="text_color" text="Cafeteria Management, DU" textFill="#fae6e6">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                            <stylesheets>
+                                                                <URL value="@mainForm1Design.css" />
+                                                                <URL value="@LoginStyle.css" />
+                                                            </stylesheets>
+                                                        </Label>
+                                                    </children>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                    <styleClass>
+                                                        <String fx:value="header" />
+                                                        <String fx:value="gradient" />
+                                                    </styleClass>
+                                                </AnchorPane>
+                                                <Button layoutX="34.666666666666686" layoutY="293.0" mnemonicParsing="false" onAction="#CustomerMenu" prefHeight="40.0" prefWidth="205.0" text="Menu" AnchorPane.rightAnchor="58.66666666666666">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                    <styleClass>
+                                                        <String fx:value="nav-btn" />
+                                                        <String fx:value="button_box" />
+                                                    </styleClass>
+                                                </Button>
+                                                <Button layoutX="34.666666666666686" layoutY="361.0" mnemonicParsing="false" onAction="#CutomerReview" prefHeight="40.0" prefWidth="205.0" text="Product review" AnchorPane.rightAnchor="58.66666666666666">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                    <styleClass>
+                                                        <String fx:value="nav-btn" />
+                                                        <String fx:value="button_box" />
+                                                    </styleClass>
+                                                </Button>
+                                                <Button layoutX="82.0" layoutY="542.0" mnemonicParsing="false" onAction="#CustomerSignOut" text="Sign Out">
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                    <styleClass>
+                                                        <String fx:value="nav-btn" />
+                                                        <String fx:value="button_box" />
+                                                    </styleClass>
+                                                </Button>
+                                                <Button layoutX="34.0" layoutY="430.0" mnemonicParsing="false" onAction="#CustomerAboutUs" prefHeight="40.0" prefWidth="205.0" text="About Us">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                    <styleClass>
+                                                        <String fx:value="nav-btn" />
+                                                        <String fx:value="button_box" />
+                                                    </styleClass>
+                                                </Button>
+                                                <Hyperlink layoutX="97.0" layoutY="175.0" onAction="#CustomerProfile" prefHeight="31.0" prefWidth="87.0" style="-fx-alignment: center; -fx-font-size: 20px;" styleClass="ForgetPassword" stylesheets="@LoginStyle.css" text="Profile" AnchorPane.bottomAnchor="387.0" AnchorPane.leftAnchor="96.66666666666667" AnchorPane.rightAnchor="114.33333333333336" AnchorPane.topAnchor="174.66666666666669" />
+                                                <ImageView fitHeight="73.0" fitWidth="85.0" layoutX="106.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="425.6666666666667" AnchorPane.leftAnchor="105.33333333333336" AnchorPane.rightAnchor="119.66666666666669" AnchorPane.topAnchor="101.0">
+                                                    <image>
+                                                        <Image url="@../img/Profile.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </left>
+                            <center>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane fx:id="CustomerMenuForm" layoutX="175.0" layoutY="121.0" prefHeight="600.0" prefWidth="884.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="6.666666666666667" layoutY="12.333333333333334" prefHeight="580.0" prefWidth="529.0" stylesheets="@mainForm1Design.css" AnchorPane.bottomAnchor="8.333333333333371" AnchorPane.leftAnchor="6.666666666666667" AnchorPane.rightAnchor="352.66666666666663" AnchorPane.topAnchor="12.333333333333334">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="radius" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <ScrollPane fx:id="menu_scrollPane" layoutX="11.0" layoutY="9.0" prefHeight="558.0" prefWidth="506.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="9.0">
+                                                            <content>
+                                                                <GridPane fx:id="CustomerMenu_grid" prefHeight="28.0" prefWidth="100.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                </GridPane>
+                                                            </content>
+                                                        </ScrollPane>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="508.0" layoutY="11.0" prefHeight="580.0" prefWidth="333.0" stylesheets="@mainForm1Design.css" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="11.0">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="radius" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <TableView fx:id="menu_tableView" layoutX="36.0" layoutY="27.333333333333332" prefHeight="187.0" prefWidth="288.0" AnchorPane.bottomAnchor="376.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="17.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="menu_col_productName" prefWidth="113.0" text="Product Name" />
+                                                                <TableColumn fx:id="menu_col_quantity" prefWidth="93.0" text="Quantity" />
+                                                                <TableColumn fx:id="menu_col_price" prefWidth="78.0" text="Price ($)" />
+                                                            </columns>
+                                                        </TableView>
+                                          <Label layoutX="66.0" layoutY="304.0" prefHeight="17.0" prefWidth="46.0" style="-fx-text-fill: #333;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Totla:">
+                                             <textFill>
+                                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </RadialGradient>
+                                             </textFill>
+                                          </Label>
+                                          <Label layoutX="47.0" layoutY="340.0" prefHeight="25.0" prefWidth="75.0" style="-fx-text-fill: #333;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Amount:">
+                                             <textFill>
+                                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </RadialGradient>
+                                             </textFill>
+                                          </Label>
+                                          <Label layoutX="51.0" layoutY="377.0" prefHeight="25.0" prefWidth="69.0" style="-fx-text-fill: #333;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Change:">
+                                             <textFill>
+                                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </RadialGradient>
+                                             </textFill>
+                                          </Label>
+                                          <Label fx:id="menu_total" layoutX="120.0" layoutY="305.0" prefHeight="25.0" prefWidth="55.0" style="-fx-font-size: 15px;" stylesheets="@LoginStyle.css" text="0.0 TK" textFill="#070707" />
+                                          <Label fx:id="menu_change" layoutX="121.0" layoutY="379.0" prefHeight="25.0" prefWidth="69.0" style="-fx-font-size: 15px;" stylesheets="@LoginStyle.css" text="0.0 TK" textFill="#070707" />
+                                          <TextField fx:id="menu_amount" layoutX="120.0" layoutY="340.0" onAction="#Amount" promptText="0.0 TK" style="-fx-alignment: center;" stylesheets="@LoginStyle.css">
+                                             <styleClass>
+                                                <String fx:value="textfield-underline" />
+                                                <String fx:value="transparent" />
+                                             </styleClass>
+                                          </TextField>
+                                          <Button layoutX="54.0" layoutY="441.0" mnemonicParsing="false" onAction="#payBtn" prefHeight="48.0" prefWidth="243.0" styleClass="nav-btn" stylesheets="@LoginStyle.css" text="Pay" />
+                                          <Button layoutX="66.0" layoutY="505.0" mnemonicParsing="false" styleClass="nav-btn" stylesheets="@LoginStyle.css" text="Remove" />
+                                          <Button layoutX="191.0" layoutY="504.0" mnemonicParsing="false" styleClass="nav-btn" stylesheets="@LoginStyle.css" text="Rececipt" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="CustomerProfilePage" layoutX="17.333333333333332" layoutY="10.0" prefHeight="579.0" prefWidth="769.0" visible="false" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="10.0">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="gradient" />
+                                            </styleClass>
+                                            <children>
+                                                <Button layoutX="279.0" layoutY="444.0" mnemonicParsing="false" onAction="#CustomerProfileUpdate" prefHeight="40.0" prefWidth="205.0" text="Update">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                    <styleClass>
+                                                        <String fx:value="nav-btn" />
+                                                        <String fx:value="button_box" />
+                                                    </styleClass>
+                                                </Button>
+                                                <Label layoutX="260.0" layoutY="75.0" prefHeight="25.0" prefWidth="244.0" style="-fx-alignment: center; -fx-font-size: 20px;" styleClass="text_color" text="Profile Information" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label layoutX="219.0" layoutY="174.0" prefHeight="25.0" prefWidth="109.0" style="-fx-alignment: center_right;" styleClass="text_color" text="Name:" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label layoutX="194.0" layoutY="214.0" prefHeight="25.0" prefWidth="133.0" style="-fx-alignment: center_right;" styleClass="text_color" text="Registration ID:" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label layoutX="192.0" layoutY="253.0" prefHeight="25.0" prefWidth="133.0" style="-fx-alignment: center_right;" styleClass="text_color" text="Department:" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label layoutX="193.0" layoutY="332.0" prefHeight="25.0" prefWidth="133.0" style="-fx-alignment: center_right;" styleClass="text_color" text="Category:" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label fx:id="CustomerProfileName" layoutX="332.0" layoutY="174.0" prefHeight="25.0" prefWidth="205.0" style="-fx-alignment: center;" styleClass="text_color" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label fx:id="CustomerProfileID" layoutX="331.0" layoutY="215.0" prefHeight="25.0" prefWidth="205.0" style="-fx-alignment: center;" styleClass="text_color" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label fx:id="CustomerProfileDept" layoutX="330.0" layoutY="255.0" prefHeight="25.0" prefWidth="211.0" style="-fx-alignment: center;" styleClass="text_color" text="N/A" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label fx:id="CustomerProfileCat" layoutX="328.0" layoutY="334.0" prefHeight="25.0" prefWidth="205.0" style="-fx-alignment: center;" styleClass="text_color" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label layoutX="192.0" layoutY="291.0" prefHeight="25.0" prefWidth="133.0" style="-fx-alignment: center_right;" styleClass="text_color" text="Phone Number:" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                                <Label fx:id="CustomerProfilePhone" layoutX="330.0" layoutY="292.0" prefHeight="25.0" prefWidth="209.0" style="-fx-alignment: center;" styleClass="text_color" text="N/A" textFill="#fae6e6">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                </Label>
+                                            </children>
+                                            <stylesheets>
+                                                <URL value="@mainForm1Design.css" />
+                                                <URL value="@LoginStyle.css" />
+                                            </stylesheets>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="CustomerProfileUpdatePage" layoutX="19.0" layoutY="13.0" prefHeight="574.0" prefWidth="767.0" visible="false" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="19.333333333333258" AnchorPane.rightAnchor="22.333333333333258" AnchorPane.topAnchor="12.666666666666629">
+                                            <stylesheets>
+                                                <URL value="@mainForm1Design.css" />
+                                                <URL value="@LoginStyle.css" />
+                                            </stylesheets>
+                                            <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="gradient" />
+                                            </styleClass>
+                                            <children>
+                                                <TextField fx:id="CustomerProfileEditName" layoutX="352.0" layoutY="150.0" prefHeight="29.0" prefWidth="183.0" promptText="Full Name" style="-fx-font-size: 13px;" stylesheets="@LoginStyle.css">
+                                                    <styleClass>
+                                                        <String fx:value="transparent" />
+                                                        <String fx:value="textfield-underline" />
+                                                        <String fx:value="text_color" />
+                                                    </styleClass>
+                                                </TextField>
+                                                <TextField fx:id="CustomerConstID" layoutX="354.0" layoutY="204.0" prefHeight="29.0" prefWidth="183.0" promptText="Registration ID" style="-fx-font-size: 13px;" stylesheets="@LoginStyle.css">
+                                                    <styleClass>
+                                                        <String fx:value="transparent" />
+                                                        <String fx:value="textfield-underline" />
+                                                        <String fx:value="text_color" />
+                                                    </styleClass>
+                                                </TextField>
+                                                <TextField fx:id="CustomerProfileEditDept" layoutX="354.0" layoutY="257.0" prefHeight="29.0" prefWidth="183.0" promptText="Department" style="-fx-font-size: 13px;" stylesheets="@LoginStyle.css">
+                                                    <styleClass>
+                                                        <String fx:value="transparent" />
+                                                        <String fx:value="textfield-underline" />
+                                                        <String fx:value="text_color" />
+                                                    </styleClass>
+                                                </TextField>
+                                                <TextField fx:id="CustomerProfileEditPhone" layoutX="354.0" layoutY="309.0" prefHeight="29.0" prefWidth="183.0" promptText="Phone Number" style="-fx-font-size: 13px;" stylesheets="@LoginStyle.css">
+                                                    <styleClass>
+                                                        <String fx:value="transparent" />
+                                                        <String fx:value="textfield-underline" />
+                                                        <String fx:value="text_color" />
+                                                    </styleClass>
+                                                </TextField>
+                                                <Label layoutX="224.0" layoutY="156.0" prefHeight="23.0" prefWidth="101.0" style="-fx-alignment: center_right;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Full Name:" />
+                                                <Label layoutX="184.0" layoutY="210.0" prefHeight="25.0" prefWidth="142.0" style="-fx-alignment: center_right;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Registration ID:" />
+                                                <Label layoutX="226.0" layoutY="263.0" prefHeight="23.0" prefWidth="101.0" style="-fx-alignment: center_right;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Department:" />
+                                                <Label layoutX="191.0" layoutY="316.0" prefHeight="25.0" prefWidth="138.0" style="-fx-alignment: center_right;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Phone Number:" />
+                                                <Button layoutX="317.0" layoutY="437.0" mnemonicParsing="false" onAction="#CustomerProfileEditConfirm" prefHeight="40.0" prefWidth="205.0" text="Confirm">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <stylesheets>
+                                                        <URL value="@mainForm1Design.css" />
+                                                        <URL value="@LoginStyle.css" />
+                                                    </stylesheets>
+                                                    <styleClass>
+                                                        <String fx:value="nav-btn" />
+                                                        <String fx:value="button_box" />
+                                                    </styleClass>
+                                                </Button>
+                                            </children>
+                                        </AnchorPane>
+                              <AnchorPane fx:id="AboutUs_Page" layoutX="15.333333333333334" layoutY="5.333333333333333" prefHeight="590.0" prefWidth="777.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="5.0">
+                                 <stylesheets>
+                                    <URL value="@mainForm1Design.css" />
+                                    <URL value="@LoginStyle.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="gradient" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Text fill="WHITE" layoutX="37.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25px;" styleClass="text_color" text="About Us" wrappingWidth="307.4700927734375" />
+                                    <Text fill="WHITE" layoutX="35.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" styleClass="text_color" text="Welcome to the Cafeteria Management, DU, a smart and efficient platform designed to enhance the cafeteria experience at Dhaka University. Our system provides a seamless interface for students, teachers, admins, and employees to manage food orders, track purchases, and oversee cafeteria operations effortlessly." wrappingWidth="710.8034057617188" />
+                                    <Text fill="WHITE" layoutX="35.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" styleClass="text_color" text="With a secure login system, real-time menu updates, and comprehensive management tools, we ensure a smooth and transparent experience for both customers and staff. Whether you're a student ordering a meal or an admin managing inventory, our system is built to simplify and streamline cafeteria operations." wrappingWidth="710.8034057617188" />
+                                    <Text fill="WHITE" layoutX="34.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" styleClass="text_color" text="Enjoy a hassle-free dining experience with Cafeteria Management, DU!" wrappingWidth="710.8034057617188" />
+                                    <Text fill="WHITE" layoutX="34.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" styleClass="text_color" text="Location: Department of Computer Science and Engineering, University of Dhaka" wrappingWidth="710.8034057617188" />
+                                    <Text fill="WHITE" layoutX="34.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" styleClass="text_color" text="Contuct us: 01401550813, 01321092550" wrappingWidth="710.8034057617188" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="reviewPage" layoutX="1.0" prefHeight="600.0" prefWidth="791.0" stylesheets="@mainForm1Design.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="10.666666666666629" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="customer_tableview" layoutX="3.3333333333333335" layoutY="18.0" prefHeight="293.0" prefWidth="786.0" AnchorPane.bottomAnchor="289.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="18.0">
+                                       <columns>
+                                          <TableColumn fx:id="cus_col_prod_id" prefWidth="145.99999523162842" text="Product ID" />
+                                          <TableColumn fx:id="cus_col_prod_name" prefWidth="162.00001525878906" text="Product Name" />
+                                          <TableColumn fx:id="cus_col_quantity" prefWidth="142.0" text="Quantity" />
+                                          <TableColumn fx:id="cus_col_price" prefWidth="149.33334350585938" text="Total  Price" />
+                                          <TableColumn fx:id="cus_col_date" prefWidth="183.33333333333337" text="Date" />
+                                       </columns>
+                                    </TableView>
+                                    <Separator layoutX="4.0" layoutY="312.0" prefHeight="11.0" prefWidth="784.0" AnchorPane.bottomAnchor="277.3333333333333" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="3.3333333333333712" AnchorPane.topAnchor="312.0" />
+                                    <AnchorPane layoutX="2.0" layoutY="327.0" prefHeight="265.0" prefWidth="784.0" stylesheets="@mainForm1Design.css" AnchorPane.bottomAnchor="7.333333333333371" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="5.333333333333371" AnchorPane.topAnchor="327.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="63.0" layoutY="61.0" style="-fx-text-fill: #333;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Product ID:" AnchorPane.bottomAnchor="180.0" AnchorPane.topAnchor="60.666666666666664" />
+                                          <Label layoutX="481.0" layoutY="61.0" style="-fx-text-fill: #333;" styleClass="text_color" stylesheets="@LoginStyle.css" text="Give Rating:" AnchorPane.bottomAnchor="179.66666666666666" AnchorPane.leftAnchor="480.6666666666667" AnchorPane.rightAnchor="202.33333333333331" AnchorPane.topAnchor="60.66666666666667" />
+                                          <Button layoutX="338.0" layoutY="168.0" mnemonicParsing="false" onAction="#rating_confirm" styleClass="nav-btn" stylesheets="@mainForm1Design.css" text="Confirm" AnchorPane.bottomAnchor="54.66666666666671" AnchorPane.leftAnchor="338.0" AnchorPane.rightAnchor="353.3333333333333" AnchorPane.topAnchor="168.00000000000006" />
+                                          <TextField fx:id="id_box" layoutX="163.0" layoutY="58.0" promptText="Product ID" stylesheets="@LoginStyle.css" AnchorPane.bottomAnchor="179.33333333333334" AnchorPane.leftAnchor="162.66666666666666" AnchorPane.rightAnchor="486.33333333333337" AnchorPane.topAnchor="58.0">
+                                             <styleClass>
+                                                <String fx:value="transparent" />
+                                                <String fx:value="textfield-underline" />
+                                             </styleClass>
+                                          </TextField>
+                                          <TextField fx:id="rating_bos" layoutX="587.0" layoutY="59.0" promptText="Rating 0-10" stylesheets="@LoginStyle.css">
+                                             <styleClass>
+                                                <String fx:value="transparent" />
+                                                <String fx:value="textfield-underline" />
+                                             </styleClass>
+                                          </TextField>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                                    </children></AnchorPane>
+                            </center></BorderPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</VBox>
