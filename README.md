@@ -101,46 +101,16 @@ Download the project ZIP file from the [repository](#).
 ### **2. Extract the Files:**
 Extract the contents of the ZIP file to your preferred directory.
 
-### **3. Environment Setup:**
+### Running the Application  
 
-Ensure that you have **JavaFX** set up in your IDE. You may need to manually configure JavaFX if it is not bundled with your IDE. Refer to the [JavaFX installation guide](https://openjfx.io/) if necessary.
+To run the application, follow these steps:  
 
-- **For IntelliJ IDEA or Eclipse:**  
-    Add the **JavaFX SDK** to your project libraries.
-    Set the VM options to include JavaFX modules like:
-    ```bash
-    --module-path "path-to-javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml
-    ```
+1. Open a terminal or command prompt in the directory where `cafe.jar` is located.  
+2. Use the following command to run the application:  
 
-### **4. Database Setup:**
+   ```sh
+   java --module-path "your_lib_file_directory" --add-modules javafx.controls,javafx.fxml -jar cafe.jar
 
-1. **Import the Database Schema:**  
-   Import the provided SQL script from the **Database Schema** folder into your MySQL database. This will create the necessary tables and structure for your application.
-
-2. **Modify Database Credentials:**
-
-   - Open the `DatabaseUsers.java ` file located in your project folder.
-   - Find the following lines and update them with your **MySQL username** and **password**:
-   
-     ```java
-     String jdbcUsername = "root";  // MySQL username
-     String jdbcPassword = "root";  // MySQL password
-     String jdbcURL = "jdbc:mysql://localhost:3306/cafeteria_db";  // Database URL
-     ```
-
-   - Replace `"root"` with your actual MySQL username and password. Example:
-   
-     ```java
-     String jdbcUsername = "your_username";  // MySQL username
-     String jdbcPassword = "your_password";  // MySQL password
-     String jdbcURL = "jdbc:mysql://localhost:3306/cafeteria_db";  // Database URL
-     ```
-
-3. **Save the file** after modifying the credentials.
-
-### **5. Run the Application:**
-
-After setting up the database and modifying the credentials, follow these steps to run the application:
 
 1. **Run the server** (for chat functionality or backend processes).
 2. **Run the Admin and Client sections** of the application as needed.
@@ -150,7 +120,7 @@ After setting up the database and modifying the credentials, follow these steps 
 ## Troubleshooting
 
 - **Database Connection Error?**  
-  Make sure MySQL is running and that the database URL, username, and password are correctly set in the `Database.java` file.
+  Make sure MySQL is running and that the database URL, username, and password are correctly set in the `DatabaseUsers.java` file.
 
 - **JavaFX Issues?**  
   Ensure you have added the JavaFX SDK and set the VM options correctly in your IDE.
