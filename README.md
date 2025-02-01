@@ -28,14 +28,19 @@ cafe/
 │   ├── main/                   
 │   │   ├── java/
 |   |   |      |── module-info.java            
-│   │   │      |── cafe.management.cafe/  
-│   │   │           ├── CafeManagement.java       # Main entry point of the 
-                                                    application
-│   │   │           ├── DatabaseUsers.java        # Database connection logic
-│   │   │           ├── SurfaceLayoutContoller.java   
-│   │   │           ├── CustomerController.java  
-│   │   │           ├── cardProductController.java 
-│   │   │           └── ProductData.java
+│   │   │      |── cafe.management.cafe/
+|   |   |           ├── AdminController.java
+│   │   │           ├── CafeManagement.java       # Main entry point of the application
+│   │   │           ├── cardProduct.java          
+|   |   |           ├── CustomerController.java  
+|   |   |           ├── CustomerOrderHistory.java 
+│   │   │           ├── CustomerSummary.java  
+|   |   |           ├── DatabaseUsers.java        # Database connection logic cardProduct.java 
+|   |   |           ├── EmployeeData.java
+│   │   │           ├── ManagementControl.java
+│   │   │           ├── ProductData.java
+│   │   │           └── SurfaceLayoutContoller.java
+|   |   |           ├── data.java
 │   │   └── resources/          
 │   │       ├── cafe.management/        
 │   │                      ├── cafe/    # JavaFX FXML & CSS files
