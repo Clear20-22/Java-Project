@@ -115,7 +115,7 @@ Ensure that you have **JavaFX** set up in your IDE. You may need to manually con
 
 2. **Modify Database Credentials:**
 
-   - Open the `Database.java` file located in your project folder.
+   - Open the `DatabaseUsers.java ` file located in your project folder.
    - Find the following lines and update them with your **MySQL username** and **password**:
    
      ```java
