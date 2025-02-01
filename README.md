@@ -49,19 +49,9 @@ cafe/
 │   │                      ├── img/              
 │   └── lib/                         # External libraries (e.g., MySQL JDBC)
 │       └── mysql-connector-java-x.x.x.jar  # MySQL JDBC driver
-│
-├── Database-Schema/                 # SQL scripts
-│   └── cafeteria_db.sql             # SQL script for setting up the database
-│
-├── lib/                             # Other JAR files if needed
-│   └── javafx-sdk/                  # JavaFX SDK libraries
-│       ├── javafx-controls.jar
-│       └── javafx-fxml.jar
-│
-├── .gitignore                       # Git ignore file
-├── README.md                        # Project documentation (you can place the instructions here)
-├── build.gradle or pom.xml          # Gradle or Maven configuration for project dependencies
-└── DU-Cafeteria-Management.zip       # Zip file of your project (for GitHub releases)
+├── .gitignore                       
+├── README.md                       
+├── pom.xml          
 
 ```
 
