@@ -54,6 +54,15 @@ cafe/
 │   │                      ├── img/              
 │   └── lib/                         # External libraries (e.g., MySQL JDBC)
 │       └── mysql-connector-java-x.x.x.jar  # MySQL JDBC driver
+│
+├── Database-Schema/                 # SQL scripts
+│   └── cafeteria_db.sql             # SQL script for setting up the database
+│
+├── lib/                             # Other JAR files if needed
+│   └── javafx-sdk/                  # JavaFX SDK libraries
+│       ├── javafx-controls.jar
+│       └── javafx-fxml.jar
+│
 ├── .gitignore                       
 ├── README.md                       
 ├── pom.xml          
