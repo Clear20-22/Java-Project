@@ -87,15 +87,9 @@ cafe/
 - **Sign-out Confirmation** – Ensures secure logout.  
 - **"About Us" Page** – Provides details about the cafeteria and its services.  
 
-## Download Instructions 
 
-### DU Cafeteria Management System
 
-A JavaFX and MySQL-based cafeteria management system designed for the **Science Complex, University of Dhaka**. The system provides functionalities for user authentication, food ordering, inventory management, and sales tracking.
-
----
-
-## 📥 Download and Setup Instructions
+## Download and Setup Instructions
 
 ### **1. Download the ZIP File:**
 Download the project ZIP file from the [repository](#).
@@ -149,7 +143,7 @@ After setting up the database and modifying the credentials, follow these steps 
 
 ---
 
-## 📜 Troubleshooting
+## Troubleshooting
 
 - **Database Connection Error?**  
   Make sure MySQL is running and that the database URL, username, and password are correctly set in the `Database.java` file.
@@ -159,7 +153,7 @@ After setting up the database and modifying the credentials, follow these steps 
 
 ---
 
-## 📝 License
+## License
 
 Feel free to fork, clone, and modify the project. If you encounter any issues, please open an issue on this repository.
 
