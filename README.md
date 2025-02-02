@@ -113,10 +113,7 @@ Ensure that you have **JavaFX** set up in your IDE. You may need to manually con
 
 ### **4. Database Setup:**
 
-1. **Import the Database Schema:**  
-   Import the provided SQL script from the **Database Schema** folder into your MySQL database. This will create the necessary tables and structure for your application.
-
-2. **Modify Database Credentials:**
+1. **Modify Database Credentials:**
 
    - Open the `DatabaseUsers.java` file located in your project folder.
    - Find the following lines and update them with your **MySQL username** and **password**:
@@ -135,7 +132,7 @@ Ensure that you have **JavaFX** set up in your IDE. You may need to manually con
      String jdbcURL = "jdbc:mysql://localhost:3306/cafeteria_db";  // Database URL
      ```
 
-3. **Save the file** after modifying the credentials.
+2. **Save the file** after modifying the credentials.
 
 ### **5. Run the Application:**  
 
