@@ -26,46 +26,45 @@ cafe/
 │
 ├── src/                        # Source code
 │   ├── main/                   
-│   │   ├── java/
-|   |   |      |── module-info.java            
-│   │   │      |── cafe.management.cafe/
-|   |   |           ├── AdminController.java
-│   │   │           ├── CafeManagement.java       # Main entry point of the application
-│   │   │           ├── cardProduct.java          
-|   |   |           ├── CustomerController.java  
-|   |   |           ├── CustomerOrderHistory.java 
-│   │   │           ├── CustomerSummary.java  
-|   |   |           ├── DatabaseUsers.java        # Database connection logic cardProduct.java 
-|   |   |           ├── EmployeeData.java
-│   │   │           ├── ManagementControl.java
-│   │   │           ├── ProductData.java
-│   │   │           └── SurfaceLayoutContoller.java
-|   |   |           ├── data.java
-│   │   └── resources/          
-│   │       ├── cafe.management/        
-│   │                      ├── cafe/    # JavaFX FXML & CSS files
-|   |                           ├────── cardProduct.fxml
-|   |                           ├────── CustomerLayout.fxml
-|   |                           ├────── LoginPage.fxml
-|   |                           ├────── LoginStyle.css
-|   |                           ├────── mainForm1Design.css
-|   |                           ├────── SurfaceLayout.fxml
-|   |                           ├────── test.fxml
-│   │                      ├── img/              
-│   └── lib/                         # External libraries (e.g., MySQL JDBC)
-│       └── mysql-connector-java-x.x.x.jar  # MySQL JDBC driver
-│
-├── Database-Schema/                 # SQL scripts
-│   └── cafeteria_db.sql             # SQL script for setting up the database
-│
-├── lib/                             # Other JAR files if needed
-│   └── javafx-sdk/                  # JavaFX SDK libraries
-│       ├── javafx-controls.jar
-│       └── javafx-fxml.jar
-│
-├── .gitignore                       
+│      ├── java/
+|      |      |── module-info.java            
+│      │      |── cafe.management.cafe/
+|      |           ├── AdminController.java
+│      │           ├── CafeManagement.java       # Main entry point of the application
+│      │           ├── cardProduct.java          
+|      |           ├── CustomerController.java  
+|      |           ├── CustomerOrderHistory.java 
+│      │           ├── CustomerSummary.java  
+|      |           ├── DatabaseUsers.java        # Database connection logic cardProduct.java 
+|      |           ├── EmployeeData.java
+│      │           ├── ManagementControl.java
+│      │           ├── ProductData.java
+│      │           └── SurfaceLayoutContoller.java
+|      |           ├── data.java
+│      └── resources/          
+│          ├── cafe.management/        
+│                         ├── cafe/    # JavaFX FXML & CSS files
+|                              ├────── cardProduct.fxml
+|                              ├────── CustomerLayout.fxml
+|                              ├────── LoginPage.fxml
+|                              ├────── LoginStyle.css
+|                              ├────── mainForm1Design.css
+|                              ├────── SurfaceLayout.fxml
+|                              ├────── test.fxml
+│                         ├── img/              
+├── target/
+├── lib/                         
+├── out/
+│     ├──── artifacts
+|                  ├───cafe_jar
+|                           ├──── cafe.jar
+├── .git/
+├── .idea/
+├── .mvn/
+├── javafx-sdk-23.0.1.                      
 ├── README.md                       
-├── pom.xml          
+├── pom.xml
+├── .gigintore    
 
 ```
 
@@ -101,7 +100,44 @@ Download the project ZIP file from the [repository](#).
 ### **2. Extract the Files:**
 Extract the contents of the ZIP file to your preferred directory.
 
-### Running the Application  
+### **3. Environment Setup:**
+
+Ensure that you have **JavaFX** set up in your IDE. You may need to manually configure JavaFX if it is not bundled with your IDE. Refer to the [JavaFX installation guide](https://openjfx.io/) if necessary.
+
+- **For IntelliJ IDEA or Eclipse:**  
+    Add the **JavaFX SDK** to your project libraries.
+    Set the VM options to include JavaFX modules like:
+    ```bash
+    --module-path "path-to-javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml
+    ```
+
+### **4. Database Setup:**
+
+1. **Import the Database Schema:**  
+   Import the provided SQL script from the **Database Schema** folder into your MySQL database. This will create the necessary tables and structure for your application.
+
+2. **Modify Database Credentials:**
+
+   - Open the `DatabaseUsers.java` file located in your project folder.
+   - Find the following lines and update them with your **MySQL username** and **password**:
+   
+     ```java
+     String jdbcUsername = "root";  // MySQL username
+     String jdbcPassword = "root";  // MySQL password
+     String jdbcURL = "jdbc:mysql://localhost:3306/cafeteria_db";  // Database URL
+     ```
+
+   - Replace `"root"` with your actual MySQL username and password. Example:
+   
+     ```java
+     String jdbcUsername = "your_username";  // MySQL username
+     String jdbcPassword = "your_password";  // MySQL password
+     String jdbcURL = "jdbc:mysql://localhost:3306/cafeteria_db";  // Database URL
+     ```
+
+3. **Save the file** after modifying the credentials.
+
+### **5. Run the Application:**  
 
 To run the application, follow these steps:  
 
